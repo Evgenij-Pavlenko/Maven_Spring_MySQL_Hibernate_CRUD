@@ -1,27 +1,28 @@
-package testgroup.filmografy.model;
+package testgroup.filmography.model;
 
 import javax.persistence.*;
 
-    @Entity
-    @Table(name = "films")
-    public class Film {
+@Entity
+@Table(name = "films")
+public class Film {
 
-        @Id
-        @Column(name = "id")
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int id;
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-        @Column(name = "title")
-        private String title;
+    @Column(name = "title")
+    private String title;
 
-        @Column(name = "year")
-        private int year;
+    @Column(name = "year")
+    private int year;
 
-        @Column(name = "genre")
-        private String genre;
+    @Column(name = "genre")
+    private String genre;
 
-        @Column(name = "watched")
-        private boolean watched;
+    @Column(name = "watched")
+    private boolean watched;
+
 
     public int getId() {
         return id;
@@ -65,12 +66,7 @@ import javax.persistence.*;
 
     @Override
     public String toString() {
-        return "Film{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", year=" + year +
-                ", genre='" + genre + '\'' +
-                ", watched=" + watched +
-                '}';
+        return id + " " + title + " " + year + " " + genre + " " + watched;
     }
 }
+
